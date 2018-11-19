@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<script src='https://www.gstatic.com/charts/loader.js'></script>
+<script>
+google.charts.load('current' { packages: ['timeline'] })
+google.charts.setOnLoadCallback(main)
+const main = () => {
+  const container = document.getElementById('timeline')
+  const chart = new google.visualization.Timeline(cintainer)
+  const data = new google.visualization.DataTable()
+  data.addColumn({ type: 'string', id: 'President' })
+  data.addColumn({ type: 'date', id: 'Start' })
+  data.addColumn({ type: 'date', id: 'End' })
+  data.addRows([
+    [ 'Washington', new Date(1789, 3, 30), new Date(1792, 2, 4) ]
+  ])
+  chart.draw(data)
+</script>
+</head>
+<body>
+<div id='timeline' style='height: 180px;'></div>
+</body>
+</html>
