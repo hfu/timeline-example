@@ -5,8 +5,9 @@
 <script>
 google.charts.load('current', { packages: ['timeline'] })
 const main = () => {
-  const container = document.getElementById('timeline')
-  const chart = new google.visualization.Timeline(cintainer)
+  const chart = new google.visualization.Timeline(
+    document.getElementById('timeline')
+  )
   const data = new google.visualization.DataTable()
   data.addColumn({ type: 'string', id: 'President' })
   data.addColumn({ type: 'date', id: 'Start' })
